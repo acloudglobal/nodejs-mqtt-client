@@ -1,0 +1,23 @@
+{
+  "mqtt": {
+    "hostname":"172.17.1.30",
+    "port":"1883",
+    "username":"raspberry_union_2016120101",
+    "password":"123456"
+  },
+
+  "endpoint": {
+    "id":"raspberry_union_2016120101",
+    "tenant": {
+      "id":"tenant_china_union"
+    }
+  },
+
+  "event":{
+    "alert":true,
+    "location":true,
+    "measuerement":true,
+    "interval":"20000"
+  }
+
+}
