@@ -57,12 +57,12 @@ exports.location = function(endpointId) {
       "eventDate": timeInMs,
       "updateState": false,
       "metaData": {
-        "k1": "v1",
+        "place": "楚翘城",
         "k2": "v2"
       },
-      "latitude": 0.1,
-      "longitude": 0.2,
-      "elevation": 8.8
+      "latitude": 31.976709,
+      "longitude": 118.771025,
+      "elevation": 200
     }
   };
 
