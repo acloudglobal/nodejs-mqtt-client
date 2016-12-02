@@ -2,14 +2,14 @@
 # chkconfig: 2345 80 90
 # description: nodejs-mqtt-client service
 
-PATH=/usr/local/bin/
+PATH=/home/pi/
 
 NODEJSMQTT=/home/pi/Workspace/nodejs-mqtt-client/client.js
 
 start() {
     echo "Nodejs mqtt client starting ..."
     # nodejs mqtt启动
-    forever start -u nodejs-mqtt-client -a $NODEJSMQTT
+    forever start -u nodejs-mqtt-client-damon -a $NODEJSMQTT
 }
 
 stop() {
