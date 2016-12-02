@@ -1,0 +1,42 @@
+#!/bin/bash
+# chkconfig: 2345 80 90
+# description: nodejs-mqtt-client service
+
+PATH=/usr/local/bin/
+
+NODEJSMQTT=/home/pi/Workspace/nodejs-mqtt-client/client.js
+
+start() {
+    echo "Nodejs mqtt client starting ..."
+    # nodejs mqtt启动
+    forever start -u nodejs-mqtt-client -a $NODEJSMQTT
+}
+
+stop() {
+    echo "Nodejs mqtt client stoping ..."
+    # 停止nodejs mqtt
+    forever stop $NODEJSMQTT
+}
+
+restart() {
+    echo "Nodejs mqtt client restarting ..."
+    # 全部重启
+    forever restartall
+}
+
+# See how we were called.
+case "$1" in
+    start)
+      start
+    ;;
+    stop)
+        stop
+    ;;
+    restart|force-reload)
+        restart
+    ;;
+    *)
+    echo $"Usage: $0 {start|stop|restart|force-reload}"
+    exit 1
+    ;;
+esac
